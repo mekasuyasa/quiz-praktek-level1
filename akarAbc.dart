@@ -1,7 +1,26 @@
 // function Persamaan ABC
+// import 'dart:ffi';
 import 'dart:math';
+import 'dart:io';
 
-void akarAbc(double A, double B, double C) {
+void akarABC() {
+  double A = 1;
+  double B = 0;
+  double C = -4;
+
+  print('Dipilih menu Akar y=Ax^2 + Bx +c');
+  print('-------------------------');
+  print('Masukkan parameter A:?');
+  A = double.parse(stdin.readLineSync()!);
+  print('Masukkan parameter B:?');
+  B = double.parse(stdin.readLineSync()!);
+  print('Masukkan parameter C:?');
+  C = double.parse(stdin.readLineSync()!);
+  dynamic result = akar(A, B, C);
+  print("Akar persamaan $A x^2 + $B x + $C adalah $result.");
+}
+
+dynamic akar(double A, double B, double C) {
   dynamic hasil = 0;
   dynamic hasil2 = 0;
   double determinan = B * B - 4 * A * C;
@@ -15,14 +34,4 @@ void akarAbc(double A, double B, double C) {
     hasil = '$hasil dan $hasil2';
   }
   return hasil;
-}
-
-void main() {
-  print('praktikum Return Value oleh M. Eka Suyasa');
-  print('-----------------------------------------');
-  double A = 2;
-  double B = 3;
-  double C = -4;
-  dynamic result = akar(A, B, C);
-  print("Akar persamaan $A x^2 + $B x + $C adalah $result.");
 }

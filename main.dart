@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'akarAbc.dart';
 import 'hitungzakat.dart';
 import 'luaskotak.dart';
 
@@ -19,6 +20,7 @@ void main() {
     print('2. Perkalian ');
     print('3. Hitung zakat ');
     print('4. Hitung luas kotak ');
+    print('5. Akar Polinomial tingkat 2 ');
     print('q. untuk keluar. ');
     print(' ');
     print('Pilihan:? ');
@@ -48,6 +50,9 @@ void main() {
 
       case '4':
         luasKotak();
+
+      case '5':
+        akarABC();
 
       case 'q':
         print('Dipilih keluar program');

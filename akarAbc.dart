@@ -1,7 +1,7 @@
 // function Persamaan ABC
 import 'dart:math';
 
-dynamic akar(double A, double B, double C) {
+void akarAbc(double A, double B, double C) {
   dynamic hasil = 0;
   dynamic hasil2 = 0;
   double determinan = B * B - 4 * A * C;
